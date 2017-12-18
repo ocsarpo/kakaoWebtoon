@@ -13,7 +13,7 @@
     <%@webtoons.each do |w|%>
     <tr>
       <!-- alt src가 없으면.. 보일 것 -->
-      <td> <img width="50" src="<%=w.img_url%>" alt="w.title"></td>
+      <td> <img width="50" src="<%=w.img_url%>" alt="<%=w.title%>"></td>
       <td><%=w.title%></td>
       <td><%=w.desc%></td>
       <td><%=w.score.round(2)%></td>
