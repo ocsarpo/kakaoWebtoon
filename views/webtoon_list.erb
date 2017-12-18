@@ -1,0 +1,25 @@
+<a href="/">홈으로</a>
+<table>
+  <thead>
+    <tr>
+      <th>이미지</th>
+      <th>제목      </th>
+      <th>소개</th>
+      <th>평점</th>
+      <th>링크</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@webtoons.each do |w|%>
+    <tr>
+      <!-- alt src가 없으면.. 보일 것 -->
+      <td> <img width="50" src="<%=w.img_url%>" alt="w.title"></td>
+      <td><%=w.title%></td>
+      <td><%=w.desc%></td>
+      <td><%=w.score.round(2)%></td>
+      <!-- a 태그 새 창에서 보기 -->
+      <td> <a href="<%=w.url%>" target="_blank">보러가기</a></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
